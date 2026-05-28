@@ -21,8 +21,8 @@
 
 ## 🛠️ 环境依赖
 
-- 操作系统：Ubuntu 20.04
-- 核心组件：Hadoop 3.3.0, Spark 3.1.1 (Standalone 或 YARN 模式)
+- 操作系统：Ubuntu 16.04
+- 核心组件：Hadoop 3.1.3, Spark 3.3.2 
 - 语言环境：Python 3.8+ 
 - 核心依赖库：`pyspark`, `pyecharts`
 
@@ -33,6 +33,15 @@
 ```bash
 hdfs dfs -mkdir -p /user/hadoop-wei/
 hdfs dfs -put data/us-counties.txt /user/hadoop-wei/
+```
+
+## 2. 一键执行 Spark 计算流水线
+
+进入脚本目录，赋予执行权限并运行批处理调度脚本。该脚本会自动按业务依赖顺序，向 Spark 集群提交所有的 `.py` 计算任务：
+
+```bash
+chmod +x scripts/run_all_tasks.sh
+./scripts/run_all_tasks.sh
 ```
 
 ## 📊 20 大核心业务需求全景展示与深度推演
