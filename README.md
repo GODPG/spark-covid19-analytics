@@ -31,8 +31,8 @@
 **1. 准备数据**
 将原始数据集 `us-counties.txt` 上传至 HDFS 指定目录：
 ```bash
-hdfs dfs -mkdir -p /user/hadoop-wei/
-hdfs dfs -put data/us-counties.txt /user/hadoop-wei/
+hdfs dfs -mkdir -p /user/hadoop-wei (your machine name)/
+hdfs dfs -put data/us-counties.txt /user/hadoop-wei (your machine name)/
 ```
 
 ## 2. 一键执行 Spark 计算流水线
